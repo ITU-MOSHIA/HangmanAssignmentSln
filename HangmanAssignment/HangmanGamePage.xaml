@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HangmanAssignment.HangmanGamePage"
+             Title="Hangman Game">
+    <VerticalStackLayout Padding="20" Spacing="20">
+        <Label Text="Welcome to Hangman"
+               HorizontalTextAlignment="Center"
+               FontAttributes="Bold"
+               FontSize="40" />
+
+        <Image x:Name="HangmanImage"
+               Source="hang1.png"
+               Margin="40"
+               HorizontalOptions="Center" />
+
+        <Label x:Name="WordDisplay"
+               FontAttributes="Bold"
+               FontSize="30"
+               HorizontalOptions="Center"
+               Text="______" />
+
+        <Label x:Name="TriesLeftLabel"
+               FontAttributes="Bold"
+               FontSize="20"
+               HorizontalOptions="Center"
+               Text="Tries Left: 8" />
+
+        <Entry x:Name="GuessEntry"
+               FontSize="30"
+               Placeholder="Enter your guess"
+               MaxLength="1"
+               HorizontalOptions="Center" />
+
+        <Button Text="Guess"
+                Clicked="OnGuessButtonClicked"
+                HorizontalOptions="Center" />
+    </VerticalStackLayout>
+</ContentPage>
